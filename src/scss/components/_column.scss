@@ -1,0 +1,54 @@
+.columns {
+	margin: $gap-10;
+	background-color: #ebdfdf;
+	line-height: 2rem;
+	flex: 0 0 auto;
+	padding: $gap-10;
+	border-radius: $column-border-radius;
+	overflow-y: auto;
+	width: 300px;
+	&::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 7px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: darken($color: grey, $amount: 20);
+		border: 1px black solid;
+		border-radius: 5px;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: #f5f5f5;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: $gap-20;
+		cursor: pointer;
+	}
+
+	&__content {
+		&__item {
+			background-color: white;
+			padding: $gap-10;
+			margin-bottom: $gap-10;
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		.card-ghost {
+			transition: transform 0.18s ease;
+			transform: rotateZ(5deg);
+		}
+
+		.card-ghost-drop {
+			transition: transform 0.18s ease-in-out;
+			transform: rotateZ(0deg);
+		}
+		.card-drop-preview {
+			background-color: rgba(150, 150, 200, 0.1);
+			border: 1px solid #abc;
+			border-radius: 5px;
+			margin: 5px;
+		}
+	}
+}
